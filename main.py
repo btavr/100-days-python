@@ -15,3 +15,17 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+password = ""
+
+for x in range(0, nr_letters):
+    password += random.choice(letters)
+for x in range(0, nr_numbers):
+    password += random.choice(numbers)
+for x in range(0, nr_symbols):
+    password += random.choice(symbols)
+
+l_password = list(password)
+random.shuffle(l_password)
+result = ''.join(l_password)
+
+print(result)
