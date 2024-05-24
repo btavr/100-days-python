@@ -45,4 +45,3 @@ while lives > 0:
     print(stages[lives])
 
 print(f"{' '.join(display)}")
-
