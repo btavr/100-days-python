@@ -11,16 +11,18 @@ display = []
 
 #TODO-1: - Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_"). Then you can tell the user they've won.
 
-guess = input("Guess a letter: ").lower()
-
 for i in chosen_word:
     display.append("_")
 
-position = 0
-for letter in chosen_word:
-    if letter == guess:
-        display[position] = guess
-    position += 1
+while "_" in display:
+    guess = input("Guess a letter: ").lower()
 
+    position = 0
+    for letter in chosen_word:
+        if letter == guess:
+            display[position] = guess
+        position += 1
 
-print(display)
+    print(display)
+
+print("You won!")
